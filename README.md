@@ -4,33 +4,33 @@ Una API REST construida con Node.js y Express para gestionar el catálogo de pro
 
 ## 📁 Requisitos
 
--VisualStudio Code
--Node.js (v16 o superior)
--git
--Postman
+- VisualStudio Code
+- Node.js (v16 o superior)
+- git
+- Postman
 
 Extensiones de VisualStudio Code alternativas a Postman:
--REST Client
--Thunder Client
+- REST Client
+- Thunder Client
 
-### ⚙️ Clona el repositorio
+## ⚙️ Clona el repositorio
 Utilizando git Bash en la carpeta donde quieras guardar la API:
 
 * git clone https://github.com/EugeneWu1/API_Productos.git
 
-#### ⚙️ Instalación de dependencias
+## ⚙️ Instalación de dependencias
 
--Instala express ejecutando el siguiente comando en la terminal:
+- Instala express ejecutando el siguiente comando en la terminal:
 
 * npm install express
 
-##### 🚀 Ejecución
+## 🚀 Ejecución
 
 En la terminal de VisualStudio Code ejecuta el comando:
 
-npm run dev
+* npm run dev
 
-###### 📚 Pruebas las rutas
+## 📚 Pruebas las rutas
 
 Después de haber ejecutado el comando anterior dirigete al archivo "api.http" y ejecuta las rutas disponibles.
 
@@ -53,6 +53,6 @@ Requerimientos del body para crear un nuevo producto usa este formato de ejemplo
 }
 
 -PUT /productos/:id :Modifica un producto existente por su id.
-Requiere los mismos campos que POST.
+ Requiere los mismos campos que POST.
 
 -DELETE /productos/:id : Elimina un producto por su id.
