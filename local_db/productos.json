@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Cuaderno universitario",
+    "precio": 45.50,
+    "descripcion": "Cuaderno de 100 hojas con espiral resistente.",
+    "disponible": true,
+    "fecha_ingreso": "2025-06-19T17:30:00.000Z"
+  },
+  {
+    "id": 2,
+    "nombre": "Bolígrafo azul",
+    "precio": 5.25,
+    "descripcion": "Bolígrafo de tinta azul con punta fina.",
+    "disponible": true,
+    "fecha_ingreso": "2025-06-19T17:31:00.000Z"
+  },
+  {
+    "id": 3,
+    "nombre": "Regla 30 cm",
+    "precio": 12.00,
+    "descripcion": "Regla plástica transparente de 30 centímetros.",
+    "disponible": true,
+    "fecha_ingreso": "2025-06-19T17:32:00.000Z"
+  },
+  {
+    "id": 4,
+    "nombre": "Mochila escolar",
+    "precio": 350.00,
+    "descripcion": "Mochila con compartimentos múltiples y acolchado.",
+    "disponible": false,
+    "fecha_ingreso": "2025-06-19T17:33:00.000Z"
+  },
+  {
+    "id": 5,
+    "nombre": "Lápiz HB",
+    "precio": 2.75,
+    "descripcion": "Lápiz de grafito HB con borrador incluido.",
+    "disponible": true,
+    "fecha_ingreso": "2025-06-19T17:34:00.000Z"
+  }
+]

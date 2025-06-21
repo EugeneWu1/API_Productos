@@ -1,0 +1,36 @@
+###Inicio de la pagina
+GET http://localhost:3000
+
+### Consulta de productos
+GET http://localhost:3000/productos
+
+### Consulta de productos por id
+GET http://localhost:3000/productos/1
+
+### Consulta por disponibilidad
+GET http://localhost:3000/productos/disponibles
+
+### Crear una pelicula
+POST http://localhost:3000/productos
+Content-Type: application/json
+
+{
+   "nombre": "Corrector",
+   "precio": 30,
+   "descripcion":"Corrector para corregir manchas de boligrafo",
+   "disponible": true
+}
+
+### Actualizar un producto por id
+PUT http://localhost:3000/productos/6
+Content-Type: application/json
+
+{
+  "nombre": "Corrector Blanco",
+  "precio": 25,
+  "descripcion": "Corrector líquido de secado rápido para papel.",
+  "disponible": false
+}
+### Eliminar un producto
+
+
