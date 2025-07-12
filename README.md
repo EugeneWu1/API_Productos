@@ -22,7 +22,14 @@ Utilizando git Bash en la carpeta donde quieras guardar la API:
 
 - Instala express ejecutando el siguiente comando en la terminal:
 
+```bash
+
 * npm install express
+```
+
+````bash
+ npm install zod uuid jsonwebtoken cors dotenv mysql2
+````
 
 ## 🚀 Ejecución
 

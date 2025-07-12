@@ -3,7 +3,7 @@
 GET http://localhost:3000/productos
 
 ### Consulta de productos por id
-GET http://localhost:3000/productos/3
+GET http://localhost:3000/productos/11
 
 ### Consulta por disponibilidad
 GET http://localhost:3000/productos/disponibles
@@ -13,22 +13,24 @@ POST http://localhost:3000/productos
 Content-Type: application/json
 
 {
-   "nombre": "Corrector",
-   "precio": 30,
-   "descripcion":"Corrector para corregir manchas de boligrafo",
-   "disponible": true
+  "nombre": "Laptop VICTUS",
+  "precio": 799.99,
+  "descripcion": "Laptop moderna con 16GB RAM y 256GB SSD",
+  "disponible": true,
+  "categoria_id": 2
 }
 
 ### Actualizar un producto por id
-PUT http://localhost:3000/productos/6
+PUT http://localhost:3000/productos/11
 Content-Type: application/json
 
 {
-  "nombre": "Corrector Blanco",
-  "precio": 25,
-  "descripcion": "Corrector líquido de secado rápido para papel.",
-  "disponible": false
+  "nombre": "Laptop VICTUS",
+  "precio": 799.99,
+  "descripcion": "Laptop moderna con 8GB RAM y 256GB SSD",
+  "disponible": true,
+  "categoria_id": 1
 }
 ### Eliminar un producto
 
-DELETE http://localhost:3000/productos/6
+DELETE http://localhost:3000/productos/11
