@@ -34,7 +34,7 @@ Desde la raíz de la carpeta mysql-docker se encuentra el archivo docker-compose
 
 ```bash
 
-* npm install express
+ npm install express
 ```
 
 ````bash
