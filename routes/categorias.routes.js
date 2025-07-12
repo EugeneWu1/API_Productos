@@ -1,23 +1,22 @@
 import { Router } from 'express'
-import categoriasController from '../controllers/productos.controllers.js'
+import {getAll, crearCategoria,getCategoriaById,actualizarCategoria,borrarCategoria} from '../controllers/categorias.controller.js'
 import { isAuth } from '../middlewares/isAuth.js'
 
 const categoriasRouter = Router()
 
-categoriasRouter.get('/',(req,res) => {
-    categoriasController.getAll(req,res)
-})
+//Consultar todas las categorias
+categoriasRouter.get('/', isAuth,getAll)
 
 //Crear categoria
-categoriasRouter.post('/',categoriasController.crearCategoria)
+categoriasRouter.post('/',crearCategoria)
 
 //Consulta por id
-categoriasRouter.get('/:id',categoriasController.getById)
+categoriasRouter.get('/:id',getCategoriaById)
 
 //Actualizar por id
-categoriasRouter.put('/:id',categoriasController.updateCategoria)
+categoriasRouter.put('/:id',actualizarCategoria)
 
 //Eliminar categoria
-categoriasRouter.delete('/:id',categoriasController.deleteCategoria)
+categoriasRouter.delete('/:id',borrarCategoria)
 
 export default categoriasRouter

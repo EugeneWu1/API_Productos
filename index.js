@@ -1,5 +1,6 @@
 import express from 'express'
 import productosRouter from './routes/productos.routes.js'
+import categoriasRouter from './routes/categorias.routes.js'
 import cors from 'cors' 
 import dotenv from 'dotenv'
 
@@ -28,6 +29,8 @@ app.use(cors({
 //Rutas de productos
 app.use('/productos',productosRouter)
 
+//Rutas de categorias
+app.use('/categorias',categoriasRouter)
 
 //Ruta predeterminada
 app.use((req,res)=>{

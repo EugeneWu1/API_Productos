@@ -1,4 +1,4 @@
-import { tr } from 'zod/v4/locales'
+
 import pool from '../config/database.js'
 
 export const getAllProductos = async () => {
@@ -65,7 +65,7 @@ const query = `SELECT
         return resultados
     } catch (error) {
         console.error(`Error al obtener producto con ${id}:`, error)
-    throw error
+        throw error
     }
 }
 
@@ -83,7 +83,7 @@ export const insertProducto = async (producto) => {
 
         const [resultado] = await conn.execute(query,[nombre,precio,descripcion,disponible,categoria_id])
 
-        await conn.commit()
+        conn.commit()
         producto.id = resultado.insertId
         return producto
 
@@ -98,7 +98,7 @@ export const insertProducto = async (producto) => {
 export const updateProducto = async (id,data) => {
     const conn = await pool.getConnection()
   try {
-    await conn.beginTransaction()
+    conn.beginTransaction()
 
     const { nombre, precio, descripcion, disponible, categoria_id } = data
 
@@ -121,7 +121,7 @@ export const updateProducto = async (id,data) => {
       id
     ])
 
-    await conn.commit()
+    conn.commit()
 
     const nuevaData = {
       id,
@@ -145,13 +145,13 @@ export const updateProducto = async (id,data) => {
 export const deleteProducto = async (id) => {
     const conn = await pool.getConnection()
     try {
-        await conn.beginTransaction()
+        conn.beginTransaction()
 
         const query = `DELETE FROM productos WHERE productos.id = ?`
 
         const [resultado] = await conn.execute(query,[id])
 
-        await conn.commit()
+        conn.commit()
 
         return resultado
 
