@@ -1,22 +1,22 @@
 import { Router } from 'express'
-import {getAll,mostrarDisponibles,busquedaPorID,
-    crearProductos,modificarProducto, eliminarProducto
-} from '../controllers/productos.controllers.js'
-import { isAuth } from '../middlewares/isAuth.js'
+import productosController from '../controllers/productos.controllers.js'
 
 const productosRouter = Router()
 
+productosRouter.get('/',(req,res) => {
+    productosController.getAll(req,res)
+})
 
-productosRouter.get('/', isAuth, getAll)
+productosRouter.get('/productos',productosController.mostrarProductos)
 
-productosRouter.post('/', crearProductos)
+productosRouter.get('/disponibles',productosController.mostrarDisponibles)
 
-productosRouter.get('/disponibles', mostrarDisponibles)
+productosRouter.get('/:id',productosController.busquedaPorID)
 
-productosRouter.get('/:id', busquedaPorID)
+productosRouter.post('/',productosController.crearProductos)
 
-productosRouter.put('/:id', modificarProducto)
+productosRouter.put('/:id',productosController.modificarProducto)
 
-productosRouter.delete('/:id', eliminarProducto)
+productosRouter.delete('/:id',productosController.eliminarProducto)
 
 export default productosRouter
